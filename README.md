@@ -6,9 +6,9 @@ EMA Module is a module for context-aware EMA triggering.
 
 ```Python
 from pathlib import Path
-import EMAModule
+from EMATriggerModule import TriggerModule
 
-mod = EMAModule.MainModule()
+mod = TriggerModule()
 datapath = '/PathTo/data_uniterctXXX-2021-12-15-18-26-45.csv'
 user_id = 'uniterctXXX'
 
