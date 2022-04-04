@@ -1,7 +1,7 @@
 from fabric.api import *
 
 env.user = 'root'
-env.hosts = ['unite.healthscitech.org']
+env.hosts = [server_url]
 
 
 def deploy():
