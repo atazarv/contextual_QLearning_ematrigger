@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: EMATriggerModule
+Version: 1.0
+Summary: EMAModule Trigger
+Home-page: https://github.com/atazarv/UNITE/tree/EMA_trigger_module/EMAModule
+Author: Ali T.
+Author-email: atazarv@uci.edu
+License: Apache 2.0
+Keywords: MicroRCT EMA Triggering Module
+Platform: UNKNOWN
+Classifier: Development Status :: Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8.2
+Requires-Python: >=3.8.*
+Description-Content-Type: text/markdown
+
+## Introduction
+
+EMA Module is a module for context-aware EMA triggering.
+
+## Usage:
+
+```Python
+from pathlib import Path
+import EMAModule
+
+mod = EMAModule.MainModule()
+datapath = '/PathTo/data_uniterctXXX-2021-12-15-18-26-45.csv'
+user_id = 'uniterctXXX'
+
+# Here is where Sample_{username}.csv, density_{username}.npy, bndrs_{username}.csv and userinfo_{username}.json files are stored.
+filepath = Path('/PathTo/User/Metadata/Files/')
+
+mod.main(datapath, filepath, user_id)
+```
+
+## Local Installation
+```bash
+python3 setup.py install
+```
+
+## Deploying to UNITE server:
+
+Remember to change env.hosts in fabfile.py for deployment to server before running commands.
+
+Use Python fabricator:
+```bash
+fab deploy
+```
+
+

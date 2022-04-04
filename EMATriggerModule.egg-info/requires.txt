@@ -1,0 +1,10 @@
+pandas
+heartpy<=1.2.6
+numpy
+cython
+keras
+keras-rl2
+scikit-learn
+tensorflow==2.3.0
+joblib
+gym
